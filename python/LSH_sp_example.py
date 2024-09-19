@@ -7,6 +7,8 @@ from sklearn.utils import shuffle
 from LSH_sp import get_contrast, find_best_r_normalize, g_normalize, f_h, LSH
 import matplotlib.pyplot as plt
 
+import tensorflow as tf
+
 data = np.load('CIFAR10_resnet50-keras_features.npz')
 x_trn = np.vstack((data['features_training'], data['features_testing']))
 y_trn = np.hstack((data['labels_training'], data['labels_testing']))
@@ -17,6 +19,7 @@ x_trn = np.reshape(x_trn, (-1, 2048))
 x_tst, y_tst = x_trn[:100], y_trn[:100]
 x_val, y_val = x_trn[100:1100], y_trn[100:1100]
 x_trn, y_trn = x_trn[1100:], y_trn[1100:]
+
 
 # we are using 1-nn classifier
 K = 1
