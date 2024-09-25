@@ -5,9 +5,8 @@ from tqdm import tqdm
 
 
 def get_contrast(x_trn, save_dir='eps0.1/'):
-    print("hello")
     num_cores = 8
-    mc_num = 784
+    mc_num = 10
     eps = 0.1
     n_trn = x_trn.shape[0]
     K = int(1 / eps)
