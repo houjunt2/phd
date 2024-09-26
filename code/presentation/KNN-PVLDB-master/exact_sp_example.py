@@ -1,6 +1,6 @@
 import time
 import numpy as np
-import tensorflow as ts
+import tensorflow as tf
 from sklearn.utils import shuffle
 from exact_sp import get_true_KNN, compute_single_unweighted_knn_class_shapley
 
